@@ -1,0 +1,80 @@
+.MyShopsGrid {
+	grid-template-rows: 10px 50px 150px 200px 1fr;
+}
+
+.CreateShopsBtn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.CreateShopsBtn::after {
+	content: " ";
+	display: block;
+	height: 10px;
+	width: 100%;
+	/*background-color: blue;*/
+}
+
+.Inner {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	border: 5px solid #ccc;
+	background-color: #a6e22e;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Inner:hover {
+	background-color: #9f9f9f;
+}
+
+.ShowShopCarousel {
+	overflow: hidden;
+	height: 100%;
+	grid-column: 1 / -1;
+	grid-row: 2 / span 2;
+	transition: height 0.2s ease;
+}
+
+.HideShopCarousel {
+	height: 39%;
+}
+
+.ShowShop {
+	grid-column: 1/-1;
+	grid-row: 4;
+}
+
+.ShowShopMoveUp {
+	grid-row: 3;
+}
+
+.IfNoShopIsChosen {
+	margin-top: 2em;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.SelectShopText {
+	text-align: center;
+}
+
+@media (min-width: 900px) {
+	.MyShopsGrid {
+		grid-template-rows: 10px 62px 150px 200px 1fr;
+	}
+
+	.HideShopCarousel {
+		height: 34%;
+	}
+}

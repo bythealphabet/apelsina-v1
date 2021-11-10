@@ -1,0 +1,48 @@
+.Search {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+
+@media (min-width: 900px) {
+	.Search {
+		margin-top: .275em;
+	}
+}
+
+.SearchInput,
+.SearchBtn {
+	font-family: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	font-size: 0.8rem;
+	padding: 0.4em 1em;
+	border: 1px solid #808080;
+}
+
+.SearchInput {
+	width: 100%;
+	background: #f1f1f1;
+	transform: scale(1);
+	transition: transform 0.25s ease;
+}
+
+.SearchInput:focus{
+	border-color: #222;
+	transform: scale(1.03);
+	outline: none;
+}
+
+/* Style the submit button */
+.SearchBtn {
+	background: #2196f3;
+	color: white;
+	border-left: none;
+	cursor: pointer;
+}
+
+.SearchBtn:hover {
+	background: #0b7dda;
+}

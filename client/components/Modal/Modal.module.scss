@@ -1,0 +1,79 @@
+.Modal {
+	grid-column: 1 / -1;
+	/*display: block;  Hidden by default */
+	z-index: 15; /* Sit on top */
+	position: fixed; /* Stay in place */
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1em repeat(6, 1fr) 1em;
+	grid-template-rows: repeat(12, 1fr);
+	justify-content: center;
+	align-content: center;
+}
+
+.ModalBackground {
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+
+.ModalContentBox {
+	grid-column: 1 / -1;
+	grid-row: 4 / -2;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ModalContent {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	/*background: #fff;*/
+
+	/*border: 1px solid #888;*/
+}
+
+/* The Close Button */
+.CloseModal {
+	color: #fff;
+	font-size: 3em;
+	font-weight: bold;
+
+	grid-column: 7;
+	grid-row: 3;
+	justify-self: center;
+	align-self: center;
+}
+
+.CloseModal:hover,
+.CloseModal:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media (min-width: 900px) {
+	.ModalContentBox {
+		grid-column: 3 / -3;
+		grid-row: 4 / -2;
+	}
+
+	.CloseModal {
+		grid-column: 6;
+		justify-self: end;
+		align-self: start;
+		
+	}
+}

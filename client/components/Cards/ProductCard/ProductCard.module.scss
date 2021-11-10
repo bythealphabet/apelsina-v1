@@ -1,0 +1,195 @@
+.Card {
+	overflow: hidden;
+	height: 270px;
+	margin-bottom: 1em;
+	perspective: 1000px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+	.Card {
+		/*min-width: 200px*/
+	}
+}
+
+.FlipBoxInnerRot {
+	transform: rotateY(180deg);
+}
+
+.FlipBoxInner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+
+.FlipBoxFront,
+.FlipBoxBack {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.FlipBoxFront {
+	display: flex;
+	flex-direction: column;
+	border: solid 0.5px #ccc;
+	color: #000;
+	background: #fff;
+
+	.CardImg {
+		height: 170px;
+		width: 100%;
+		object-fit: cover;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.CardInfo {
+		height: 120px;
+		display: grid;
+		grid-template-columns: 0.5em repeat(3, 1fr) 0.3em;
+		grid-template-rows: 35px 30px 1fr 1fr;
+		grid-gap: 0.2em 0;
+		align-content: center;
+
+		.CardName {
+			/*text-align: center;*/
+			font-size: 1.125rem;
+			font-weight: bold;
+			text-transform: capitalize;
+			border-bottom: solid 1px #ccc;
+
+			grid-column: 2 / -2;
+			grid-row: 1;
+			align-self: center;
+		}
+
+		.CardPrice {
+			color: #808080;
+			font-size: 1rem;
+			font-weight: bold;
+			grid-column: 2 / -2;
+			grid-row: 2;
+		}
+
+		.CardQuantity {
+			font-size: 0.9rem;
+			font-weight: bold;
+			grid-column: 2 / -2;
+			grid-row: 3;
+		}
+
+		.CardOwner {
+			font-size: 0.9rem;
+			/*font-weight: bold;*/
+			grid-column: 2 / -2;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			align-self: center;
+		}
+
+		@media (min-width: 900px) {
+			.CardName,
+			.CardPrice {
+				font-size: 1.1rem;
+			}
+
+			.CardOwner,
+			.CardQuantity {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.FlipBoxBack {
+	background-color: #fff;
+	background-position: center;
+	background-size: cover;
+	border: solid 0.5px #ccc;
+	color: #000;
+	transform: rotateY(180deg);
+
+	display: grid;
+	grid-template-columns: 0.8em repeat(3, 1fr) 0.8em;
+	grid-template-rows: 40px 40px 1fr 40px 40px;
+
+	> * {
+		grid-column: 2 / -2;
+		/*justify-self: center;*/
+	}
+
+	.CloseCard {
+		color: #000;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+
+		grid-row: 1;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.Name {
+		font-size: 1.3rem;
+		font-weight: 700;
+		grid-row: 2;
+	}
+
+	.Desc {
+		height: 100px;
+		overflow: hidden;
+		font-size: 1rem;
+		font-weight: 400;
+
+		-webkit-line-clamp: 4;
+	}
+
+	.Price {
+		color: #808080;
+		font-size: 1.2rem;
+		font-weight: 400;
+		grid-row: 4;
+	}
+
+	.Extra {
+		grid-row: -2;
+		justify-self: stretch;
+		align-self: center;
+		margin-bottom: 0.5em;
+	}
+
+	@media (min-width: 900px) {
+		.Name,
+		.Price {
+			font-size: 1.1rem;
+		}
+
+		.CardOwner,
+		.CardQuantity {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (min-width: 900px) {
+	.card-product {
+		height: 386px;
+	}
+
+	.CardInfo {
+		height: 106px;
+	}
+
+	.CardOwner {
+		align-self: center;
+	}
+}

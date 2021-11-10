@@ -1,0 +1,98 @@
+.NavBar {
+	z-index: 10;
+	position: fixed;
+	background: #fff;
+	border-top: 0.5px solid;
+	border-bottom: 0.5px solid;
+	transform: translateX(-100%);
+	top: 40px;
+	right: 0;
+	left: 0;
+	transition: transform 0.12s ease-in-out;
+	font-size: 1rem;
+
+	letter-spacing: 2px;
+
+	.NavBarList {
+		list-style: none;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+
+		.NavLink {
+			padding: 1em;
+			border-bottom: 0.5px solid #fcfc;
+		}
+
+		.NavLink:hover {
+			background: #f9f7f7;
+		}
+
+		.NavCurrent {
+			background: #f9f7f7;
+		}
+	}
+}
+
+.NavBarOpen {
+	transform: translateX(0);
+}
+
+@media (min-width: 900px) {
+	.NavBar {
+		position: initial;
+		background: transparent;
+		transform: translateY(0);
+		width: 100%;
+		max-width: 400px;
+		border: none;
+		font-size: .8rem;
+
+		z-index: 3;
+		grid-column: 10 / -1;
+		grid-row: 1;
+		align-self: center;
+		justify-self: end;
+
+		.NavBarList {
+			padding: 0;
+			flex-direction: row;
+			align-items: center;
+
+			.NavLink {
+				margin-left: .3em;
+				padding: 0.5em;
+				border: none;
+			}
+
+			.NavLink:hover {
+				background: transparent;
+				color: #9591a8;
+			}
+
+			.NavCurrent {
+				background: transparent;
+			}
+
+			.NavCurrent::after {
+				display: block;
+				content: " ";
+				height: 2px;
+				width: 100%;
+				border-bottom: 1px solid;
+			}
+		}
+	}
+}
+
+@media (min-width: 1050px) {
+	.NavBar {
+		font-size: 1em;
+	}
+
+	.NavLink {
+		margin-left: .5em;
+		padding: .8em;
+		border: none;
+	}
+}

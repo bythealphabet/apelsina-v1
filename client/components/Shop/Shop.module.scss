@@ -1,0 +1,89 @@
+.ShopGrid {
+	margin-top: 1em;
+	grid-template-rows: 150px 60px 1fr 1fr;
+	grid-gap: 0 0.5em;
+}
+
+.Banner {
+	grid-column: 1 / -1;
+	grid-row: 1 / span 1;
+}
+
+.Logo {
+	grid-column: 2 / span 2;
+	grid-row: 1 / span 2;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.Name {
+	font-size: 0.8rem;
+	text-transform: capitalize;
+	margin-left: 20%;
+	grid-column: 3 / -3;
+	grid-row: 2;
+	align-self: center;
+}
+
+.ShopProducts {
+	grid-column: 1 / -1;
+	grid-row: 3;
+}
+
+.Button {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 10%;
+	
+	margin-top: 1em;
+	font-size: 0.675rem;
+	padding: .3em;
+	
+	grid-column: 7/ -1;
+	grid-row: 2;
+	justify-self:end;
+	transition: background .3s ease;
+}
+
+.Button:hover{
+	background: #ccc;
+}
+
+.Button a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.Button p {
+	order: 2;
+}
+
+.Button img {
+	order: 1;
+	width: 40%;
+}
+
+@media (min-width: 900px) {
+	.ShopGrid {
+		grid-template-rows: 210px 60px 1fr 1fr;
+	}
+	.Name {
+		margin-left: 2em;
+		font-size: 1.3rem;
+		grid-column: 3 / -2;
+	}
+
+	.Button {
+		grid-column: 12 / span 2;
+		grid-row: 2;
+		
+	}
+
+	.Button p {
+		font-size: 1rem;
+	}
+}

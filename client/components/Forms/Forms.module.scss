@@ -1,0 +1,199 @@
+/*------------------------
+		INPUT
+------------------------*/
+
+.InputBox {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.5em;
+}
+
+.Label {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.Input,
+.TextArea {
+	font-family: inherit;
+	line-height: inherit;
+	text-align: inherit;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border: 2px solid #eee;
+	transform: scale(1);
+	transition: transform 0.25s ease;
+}
+
+.Input-signup {
+	border: solid 2px #485563;
+}
+
+.Input-signup:focus {
+	border: solid 2px #439cf9;
+}
+
+.Input-shadow {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*.TextArea{
+	margin-top: .5em;
+	width: 100%;
+	resize: none;
+	outline: none;
+	border: 2px solid #eee;
+	padding: .8em;
+}*/
+
+.Input:focus,
+.TextArea:focus {
+	border-color: #222;
+	transform: scale(1.03);
+	outline: none;
+}
+/*------------------------
+		INPUT END
+------------------------*/
+
+/*------------------------
+		CURRENCY INPUT 
+------------------------*/
+.CurrencyInput {
+	border: 2px solid #333;
+	border-radius: 5px;
+	color: #333;
+	font-size: 32px;
+	margin: 0 0 20px;
+	padding: 0.5rem 1rem;
+	width: 100%;
+}
+/*------------------------
+		CURRENCY INPUT END
+------------------------*/
+
+/*------------------------
+		CHECK BOX
+------------------------*/
+
+.CheckBox,
+.Inner,
+.Toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.CheckBox {
+	align-items: flex-start;
+	border-radius: 1.8em;
+	height: 2em;
+}
+
+.CheckBox input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.Inner {
+	width: 3em;
+	height: 0.7em;
+	border-radius: 1.8em;
+	background: #9f9f9f;
+	justify-content: flex-start;
+}
+
+.Toggle {
+	width: 1.2em;
+	height: 1.2em;
+	background: #c9ccd3;
+	background-image: linear-gradient(
+		-180deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(0, 0, 0, 0.5) 100%
+	);
+	background-blend-mode: lighten;
+	border-radius: 50%;
+	box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.5);
+	margin: 0 0.175em;
+}
+
+.IsSeller {
+	justify-content: flex-end;
+}
+
+.IsSellerToggle {
+	background: #a6e22e;
+}
+
+input:checked + .Inner {
+	background-color: #cdf47e;
+}
+input:checked + .Toggle {
+	background-color: #a6e22e;
+}
+
+input:focus + .Inner,
+input:checked + .Toggle {
+	box-shadow: 0 0 1px #a6e22e;
+}
+
+input:checked + .Inner:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/*------------------------
+		Select Box
+------------------------*/
+
+.SelectControl {
+	width: 250px;
+	font-family: inherit;
+}
+
+.SelectControl svg{
+	height: 2em;
+	width: 2em;
+}
+
+.SelectControl select {
+	display: none;
+}
+
+.Selected {
+	background-color: DodgerBlue;
+}
+
+.SelectItems div, .Selected{
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.SelectItems div,
+.Selected {
+	
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	cursor: pointer;
+}
+
+
+.SelectItems {
+	background-color: DodgerBlue;
+	z-index: 99;
+}
+
+
+.SelectHide {
+	display: none;
+}
+
+.SelectItems div:hover,
+.SameAsSelected {
+	background-color: rgba(0, 0, 0, 0.1);
+}

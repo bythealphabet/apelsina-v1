@@ -1,0 +1,43 @@
+.GoToCart {
+	display: flex;
+}
+
+.GoToCartText {
+	order: 2;
+	font-size: 0.6rem;
+	align-self: flex-end;
+}
+
+.GoToCartSvg {
+	order: 1;
+	margin-right: 1em;
+	display: flex;
+}
+
+.GoToCartQuan {
+	justify-self: flex-end;
+	align-self: center;
+	display: flex;
+	order: 3;
+}
+
+.GoToCartQuan span {
+	font-size: 0.5rem;
+}
+
+@media (min-width: 900px) {
+
+	.GoToCartSvg {
+		order: 1;
+		align-self: flex-end;
+		margin-right: 0.3em;
+	}
+
+	.GoToCartQuan {
+		font-size: 0.7rem;
+	}
+
+	.GoToCartQuan span {
+		display: none;
+	}
+}

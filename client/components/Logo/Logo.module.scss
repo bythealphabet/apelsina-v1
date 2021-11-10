@@ -1,0 +1,30 @@
+.LogoBox {
+	width: 100%;
+	grid-column: 2 / span 4;
+	grid-row: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Logo {
+	width: 100%;
+	max-width: 300px;
+}
+
+.ShopLogo {
+	border-radius: 50%;
+}
+
+.InBanner {
+	border: solid 5px #fff;
+}
+
+@media (min-width: 900px) {
+	.LogoBox {
+		width: 70%;
+	}
+
+
+}

@@ -1,0 +1,223 @@
+.Wrapper {
+	margin: 1em 0;
+	background: #fefefe;
+	border: 2px solid #eee;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	p {
+		font-size: 0.8rem;
+		margin: 0.8rem 0;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+}
+
+.UploadConsoleHeader {
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	padding: 0 0 0.3em 0;
+	margin: 0;
+	border-bottom: 2px solid #eee;
+	padding: 0.5em;
+}
+
+.Box1,
+.Box3 {
+	padding: 0.5em;
+}
+
+.Box1 {
+	grid-column: 1;
+
+	.FileInput {
+		width: 150px;
+		height: 27px;
+		color: transparent;
+	}
+
+	.FileInput::-webkit-file-upload-button {
+		visibility: hidden;
+	}
+
+	.FileInput::before {
+		content: "Select Image";
+		color: #fff;
+		display: inline-block;
+		/*background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);*/
+		background-color: DodgerBlue;
+		/*border: 1px solid #999;*/
+		/*border-radius: 3px;*/
+		padding: 0.7em 1.3em;
+		outline: none;
+		white-space: nowrap;
+		-webkit-user-select: none;
+		cursor: pointer;
+		font-weight: 700;
+	}
+
+	.FileInput:hover::before {
+		border-color: #fff;
+	}
+	.FileInput:active::before {
+		background-image: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+	}
+
+	.FileInput:active,
+	.FileInput:focus {
+		border: transparent;
+		outline: none;
+	}
+
+	.FileInput:active::before {
+		background: #439cf9;
+	}
+
+	.DisableInput::before {
+		background: #bac0cc;
+		border: 1px solid #999;
+		cursor: not-allowed;
+	}
+
+	.DisableInput:hover::before {
+		border: 1px solid #999;
+	}
+}
+
+.Box2 {
+	padding: .5em .5em 0 0; 
+	.UploadConsoleDrop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: 100%;
+		border: 2px dashed #ccc;
+		color: #ccc;
+	}
+
+	.Droping {
+		border-color: #222;
+		color: #222;
+	}
+}
+
+.Box3 {
+	.ImgGrid:first-child {
+		margin-bottom: 1em;
+	}
+	.ImgGrid {
+		width: 100%;
+		display: flex;
+		grid-column: 2;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.CurrentImg {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.UploadFile {
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 0.5em repeat(4, 1fr);
+	}
+
+	.PrimBorder {
+		border: solid #58f958 1px;
+	}
+
+	.SelectedCurrentImg {
+		opacity: 0.5;
+	}
+
+	.UploadFile img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.ProductImg {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+		align-self: center;
+	}
+
+	.DeleteIcon {
+		cursor: pointer;
+		width: 70%;
+		height: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+
+		font-weight: 700;
+		grid-column: -3 / span 2;
+		grid-row: 1 / span 2;
+		justify-self: center;
+		align-self: start;
+	}
+
+	.DeleteIcon p {
+		margin: 0;
+		font-size: 2rem;
+	}
+
+	.CoverImgText {
+		font-size: 0.8rem;
+		grid-column: 1 / -1;
+		grid-row: -1;
+		justify-self: start;
+		margin: 0;
+		padding: 0 0.5em;
+	}
+}
+
+@media (min-width: 900px) {
+	.Wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.WrapperImg {
+		grid-template-rows: 40px 1fr 1fr;
+	}
+
+	.WrapperNoImg {
+		grid-template-rows: 40px 1fr;
+	}
+	.UploadConsoleHeader {
+		grid-column: 1 / -1;
+		grid-row: 1;
+	}
+
+	.Box1 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.Box2 {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.Box3 {
+		grid-column: 1 / -1;
+		grid-row: 3;
+		.UploadFile {
+			width: 120px;
+			height: 120px;
+		}
+
+		.DeleteIcon {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

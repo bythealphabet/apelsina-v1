@@ -1,0 +1,192 @@
+.SlideshowContainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0.3em 1fr 0.3em;
+	grid-template-rows: 40px 1fr 40px;
+	align-items: center;
+
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+
+.Slides, .Prev, .Next {
+	grid-column: 1/ -1;
+	grid-row: 1 / -1;
+	align-self: center;
+}
+
+.NumberText {
+	/*background: rgba(249, 38, 114, 0.4);*/
+	z-index: 10;
+	color: #D9DBDF;
+	font-size: 12px;
+	padding: 3em 5em;
+	grid-column: 2;
+	grid-row: 1;
+	align-self: center;
+}
+
+.Slides {
+
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	/*border: solid #fff 0.5px;*/
+	/*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+
+	.SlideShowImage {
+		width: 100%;
+		object-fit: contain;
+	}
+}
+
+.Prev,
+.Next {
+	z-index: 100;
+	cursor: pointer;
+	background: rgba(249, 38, 114, 0.4);
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+
+	grid-row: 1 / -1;
+}
+
+.Prev {
+	justify-self: start;
+}
+
+.Next {
+	justify-self: end;
+	border-radius: 3px 0 0 3px;
+}
+
+.Prev:hover,
+.Next:hover {
+	background: rgba(249, 38, 114, 0.8);
+}
+
+.Dots {
+	grid-column: 2 / -2;
+	grid-row: -2;
+	justify-self: center;
+}
+
+.Dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.Active,
+.Dot:hover {
+	background-color: #717171;
+}
+
+/* Slideshow container */
+/*.SlideshowContainer {
+	display: flex;
+	align-items: center;
+	grid-column: 2/-2;
+}
+
+.SlideshowContainer img{
+	width: 100px;
+	display: block;
+}
+
+
+.Slides {
+  display: flex;
+}
+
+
+.Prev, .Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.Next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.Prev:hover, .Next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.Text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.NumberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.Fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}*/

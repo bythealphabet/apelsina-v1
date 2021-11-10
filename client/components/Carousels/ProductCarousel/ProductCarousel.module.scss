@@ -1,0 +1,74 @@
+.CarouselMain {
+	margin: 1em 0 0.5em;
+	/*padding: 1em 0;*/
+	grid-column: 1 / -1;
+	align-self: center;
+
+	display: grid;
+	grid-template-columns: 1em 1fr 1em;
+	grid-template-rows: 40px 1fr 10px;
+	align-content: start;
+}
+
+.CarouselGridWithLabel {
+	margin: 0 0 0.5em;
+	grid-template-rows: 1fr 10px;
+}
+
+.Carousel {
+	grid-column: 2 / -2;
+}
+
+.CarouselMain > .Full {
+	grid-column: 1 / -1;
+}
+
+.CarouselLabel {
+	grid-column: 2 / -2;
+	color: #808080;
+	font-size: 1.2rem;
+	font-weight: 400;
+	grid-row: 1;
+	align-self: center;
+}
+.Carousel {
+	display: grid;
+	grid-gap: 0.8em;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	background: #f6f6f6;
+	padding: 1em;
+}
+
+.Carousel:after {
+	content: "";
+	width: 1em;
+}
+
+.NoScrollBar {
+	scrollbar-width: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.NoScrollBar::-webkit-scrollbar {
+	display: none;
+}
+
+@media (min-width: 900px) {
+	.CarouselMain {
+		height: 100%;
+		padding: 1em 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.Carousel {
+		margin: 0 auto;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+		grid-auto-rows: 1fr;
+		grid-gap: 0.5em;
+	}
+}

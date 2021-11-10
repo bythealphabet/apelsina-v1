@@ -1,0 +1,39 @@
+.Hamburger {
+	width: 25px;
+
+	grid-column: 7 / span 1;
+	grid-row: 1;
+	justify-self: end;
+	align-self: center;
+}
+
+.Hamburger:after,
+.Hamburger:before,
+.Hamburger div {
+	/*background: #fff;*/
+	background: #000;
+	border-radius: 3px;
+	content: "";
+	display: block;
+	height: 0.15em;
+	margin: 0.25em 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.Close:before {
+	transform: translateY(0.35em) rotate(135deg);
+}
+
+.Close:after {
+	transform: translateY(-0.45em) rotate(-135deg);
+}
+
+.Close div {
+	transform: scale(0);
+}
+
+@media (min-width: 900px) {
+	.Hamburger{
+		display: none;
+	}
+}

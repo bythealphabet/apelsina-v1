@@ -1,0 +1,82 @@
+.AddToCart {
+	padding: 0em 0.3em;
+	width: 80px;
+	color: #353336;
+	display: flex;
+	flex-direction: column;
+}
+
+.AddToCartBtns {
+	border-bottom: .5px solid #353336;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	order: 1;
+
+	.AddToCartSvg {
+		order: 2;
+		display: flex;
+	}
+
+	.AddToCartPlus {
+		order: 3;
+	}
+
+	.AddToCartMinus {
+		order: 1;
+	}
+}
+
+.AddToCartQuan {
+	order: 2;
+	font-size: .7rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 900px) {
+	.AddToCartPlus {
+		display: block;
+	}
+}
+
+/*.AddToCartText {
+	order: 2;
+	font-size: 0.6rem;
+	align-self: flex-end;
+}
+
+.AddToCartSvg {
+	order: 1;
+	margin-right: 1em;
+	display: flex;
+}
+
+.AddToCartQuan {
+	justify-self: flex-end;
+	align-self: center;
+	display: flex;
+	order: 3;
+}
+
+.AddToCartQuan span {
+	font-size: 0.5rem;
+}
+
+@media (min-width: 900px) {
+
+	.AddToCartSvg {
+		order: 1;
+		align-self: flex-end;
+		margin-right: 0.3em;
+	}
+
+	.AddToCartQuan {
+		font-size: 0.7rem;
+	}
+
+	.AddToCartQuan span {
+		display: none;
+	}
+}*/

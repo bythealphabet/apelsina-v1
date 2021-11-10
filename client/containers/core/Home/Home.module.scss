@@ -1,0 +1,41 @@
+.HomeGrid {
+	grid-template-rows: 200px 2fr 1fr;
+}
+
+.HomeShopsCarousel,
+.HomeProductsCarousel {
+	grid-column: 1 / -1;
+	align-self: center;
+}
+
+.HomeProductsCarousel {
+	grid-row: 1;
+}
+
+.HomeShopsCarousel {
+	grid-row: 2;
+}
+
+.Btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+	.HomeProductsCarousel {
+		width: 100%;
+		height: 80vh;
+		grid-column: 5 / -1;
+		align-self: start;
+	}
+
+	.HomeShopsCarousel {
+		grid-column: 2 / span 3;
+		grid-row: 1;
+		align-self: flex-start;
+	}
+
+	.Cart {
+		margin-right: 1em;
+	}
+}

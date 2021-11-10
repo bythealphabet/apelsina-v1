@@ -1,0 +1,108 @@
+.CatCarouselMain {
+	padding: 1em 0;
+	display: grid;
+	grid-template-columns: 1em 1fr 1em;
+	align-content: start;
+}
+
+.CatCarousel {
+	grid-column: 2 / -2;
+}
+
+.CatCarouselMain > .Full {
+	grid-column: 1 / -1;
+}
+
+.CatCarousel {
+	display: grid;
+	grid-template-columns: repeat(14, 50px);
+	grid-gap: 0.2em;
+	overflow-x: scroll;
+	padding: 0.5em;
+}
+
+.CatCarouselItem {
+	cursor: pointer;
+	justify-self: center;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CatCarousel:after {
+	content: "";
+	width: 1em;
+}
+
+.CatItemImg {
+	/*background: #fff;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*border: solid #fff 2px;*/
+	border-radius: 10px;
+	padding: 0.3em;
+	height: 2.2em;
+	width: 2.2em;
+}
+
+svg{
+	fill: #fff;
+}
+
+.CatItemImg:hover{
+	background: #fff;
+}
+
+.CatItemImg:hover svg{
+	fill: rgba(249, 38, 114, 0.8);
+	fill: #495a7b;
+}
+
+.catImgBackWhite{
+	background: #fff;
+}
+
+.CatItemText {
+	width: 50px;
+	font-weight: bold;
+	font-size: 0.8rem;
+	letter-spacing: 1.2px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #fff;
+}
+
+.NoScrollBar {
+	scrollbar-width: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.NoScrollBar::-webkit-scrollbar {
+	display: none;
+}
+
+@media (min-width: 800px) {
+	.CatCarousel {
+		justify-self: center;
+		/*grid-template-columns: repeat(13, 80px);*/
+	}
+
+	.CatCarousel {
+		grid-gap: 0.9em;
+	}
+
+	.CatItemImg {
+		/*background: #fff;*/
+		border-radius: 10px;
+		padding: 0.3em;
+		height: 3em;
+		width: 3em;
+	}
+}
